@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://kit.fontawesome.com/14e494ac10.js" crossorigin="anonymous"></script>
+
+  <title>Vue Crash Course 1 - Random User Generator</title>
+</head>
+<body>
+  <div id="app">
+    <img v-bind:src="picture" :alt="`${firstName} ${lastName}`" :class="gender"> 
+    <!-- 
+      Use the bind directive to pass props to the html properties. 
+      Backticks `` with ${} allow multiple props to be passed.
+      v-bind is optional. You can use : only.
+    -->
+    <h1>{{firstName}} {{lastName}}</h1>
+    <h3>Email: {{email}}</h3>
+    <button v-on:click="getUser()" :class="gender">Get Random User</button>
+  </div>
+  
+  <!-- Framework and app references -->
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="app.js"></script>
+
+  <!-- Compelted at 21:30 (https://www.youtube.com/watch?v=qZXt1Aom3Cs) -->
+</body>
+</html>
